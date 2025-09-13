@@ -1,9 +1,9 @@
-import express, { Request, Response } from "express";
-import path from "path";
+import express from 'express';
+import path from 'path';
 
-import { getPath } from "./utils/utils";
-import { apiRouter } from "./routes/index.route";
-import { serverlessBodyParse } from "./middlewares/index.middlewares";
+import { getPath } from './utils/utils';
+import { apiRouter } from './routes/index.route';
+import { serverlessBodyParse } from './middlewares/index.middlewares';
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,6 +16,4 @@ app.get('static', (req, res) => {
 });
 app.use('/api', apiRouter);
 
-
 export default app;
-

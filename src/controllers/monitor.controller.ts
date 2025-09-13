@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
 
-export const ping =(req: Request, res: Response) => {
+export const ping = (req: Request, res: Response) => {
   res.json({ message: 'All Good 🚀' });
-}
+};

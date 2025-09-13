@@ -2,8 +2,8 @@ import { Router } from 'express';
 import { ping } from '../controllers/monitor.controller';
 const router = Router();
 
-router.get('/ping',ping );
-router.get("/hello", (req, res) =>
+router.get('/ping', ping);
+router.get('/hello', (req, res) =>
   res.send(`
         <html>
             <body>
@@ -17,9 +17,9 @@ router.get("/hello", (req, res) =>
         </html>
     `)
 );
-router.post("/hello", (req: any, res) => {
+router.post('/hello', (req: any, res) => {
   res.json({
-    message: "Hello World!",
+    message: 'Hello World!',
     body: req.body,
     apiGateway: req?.apiGateway?.event?.body,
   });

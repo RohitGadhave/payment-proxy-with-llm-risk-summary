@@ -1,3 +1,3 @@
-import { serverlessBodyParse } from "./request-body-parse.middleware";
+import { serverlessBodyParse } from './request-body-parse.middleware';
 
 export { serverlessBodyParse };
